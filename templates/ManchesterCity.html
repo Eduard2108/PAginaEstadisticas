@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/ManchesterCity.css">
+    <link rel="icon" href="/static/assets/city/escudo.png">
+    <title>Manchester City</title>
+</head>
+<body>
+    <h1></h1>
+    <a href="{{ url_for('regresar_manchestercity') }}" class="boton-regresar">Regresar</a>
+    <div class="container-jugadores">
+        <!-- Jugador 1 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Ederson', event)">
+                <img src="/static/assets/city/ederson.jpeg" alt="">
+                <div class="pie">
+                    <p>Ederson</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 2 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Scott Carson', event)">
+                <img src="/static/assets/city/carson.jpeg" alt="">
+                <div class="pie">
+                    <p>Scoot Carson</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 3 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Stefan Ortega', event)">
+                <img src="/static/assets/city/moreno.jpeg" alt="">
+                <div class="pie">
+                    <p>Stefan Ortega</p>
+                </div>
+            </a>
+        </div>
+        <!-- Jugador 4 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('John Stones', event)">
+                <img src="/static/assets/city/stones.jpeg" alt="">
+                <div class="pie">
+                    <p>John Stones</p>
+                </div>
+            </a>
+        </div>
+        <!-- Jugador 5 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Josko Gvardiol', event)">
+                <img src="/static/assets/city/gvardiol.jpeg" alt="">
+                <div class="pie">
+                    <p>Josko Gvardiol</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 6 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Manuel Akanji', event)">
+                <img src="/static/assets/city/akanji.jpeg" alt="">
+                <div class="pie">
+                    <p>Manuel Akanji</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 7 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Nathan Ake', event)">
+                <img src="/static/assets/city/ake.jpeg" alt="">
+                <div class="pie">
+                    <p>Nathan Ake</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 8 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Kyle Walker', event)">
+                <img src="/static/assets/city/walker.jpeg" alt="">
+                <div class="pie">
+                    <p>Kyle Walker</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 9 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Rico Lewis', event)">
+                <img src="/static/assets/city/lewis.jpeg" alt="">
+                <div class="pie">
+                    <p>Rico Lewis</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 10 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Kevin De Bruyne', event)">
+                <img src="/static/assets/city/debruye.jpeg" alt="">
+                <div class="pie">
+                    <p>Kevin De Bruyne</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 11 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Jeremy Doku', event)">
+                <img src="/static/assets/city/doku.jpeg" alt="">
+                <div class="pie">
+                    <p>Jeremy Doku</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 12 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Rodrigo', event)">
+                <img src="/static/assets/city/rodri.jpeg" alt="">
+                <div class="pie">
+                    <p>Rodrigo</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 13 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Julian Alvarez', event)">
+                <img src="/static/assets/city/alvarez.jpeg" alt="">
+                <div class="pie">
+                    <p>Julian Alvarez</p>
+                </div>
+            </a>
+        </div>
+        <!-- Jugador 14 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Erling Haaland', event)">
+                <img src="/static/assets/city/haaland.jpeg" alt="">
+                <div class="pie">
+                    <p>Erling Haaland</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Jugador 15 -->
+        <div class="galeria">
+            <a href="#" class="foto" onclick="mostrarOcultarFormulario('Jack Grealish', event)">
+                <img src="/static/assets/city/grealish.jpeg" alt="">
+                <div class="pie">
+                    <p>Jack Grealish</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Formulario único para todos los jugadores -->
+    <div id="formulario" class="formulario">
+        <div class="jugador-nombre" id="nombreJugador"></div>
+        <form method="POST" action="/GuardarManchesterCity">
+
+            <label for="nombrejugador" style="visibility: hidden;">Id_jugador:</label>
+        
+            <!-- Utiliza el atributo value para almacenar el nombre del jugador -->
+            <input type="text" id="nombrejugador" name="nombrejugador" readonly required>
+    
+
+            <label for="goles">Goles:</label>
+            <input type="number" id="goles" name="goles" required min="0">
+
+            <label for="asistencias">Asistencias:</label>
+            <input type="number" id="asistencias" name="asistencias" required min="0">
+
+            <label for="perdidos">Partidos perdidos</label>
+            <input type="number" id="perdidos" name="perdidos" required min="0">
+
+            <label for="ganados">Partidos ganados:</label>
+            <input type="number" id="ganados" name="ganados" required>
+
+            <label for="empatados">Partidos empatados:</label>
+            <input type="number" id="empatados" name="empatados" required min="0">
+
+            <label for="remates">Remates al arco</label>
+            <input type="number" id="remates" name="remates" required min="0">
+
+            <label for="tarjetas">Tarjetas Amarillas:</label>
+            <input type="number" id="tarjetasamarillas" name="tarjetasamarillas" required min="0">
+
+            <label for="tarjetas">Tarjetas Rojas:</label>
+            <input type="number" id="tarjetasrojas" name="tarjetasrojas" required min="0">
+
+            <button type="submit" id="guardarFormulario">Guardar</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrarOcultarFormulario(nombreJugador, event) {
+            event.preventDefault();
+    
+            var formularioMostrar = document.getElementById('formulario');
+            var jugadorNombre = document.querySelector('.jugador-nombre');
+    
+            // Si el formulario está visible y es para el mismo jugador, oculta el formulario
+            if (formularioMostrar.style.display === 'block' && jugadorNombre.innerHTML === nombreJugador) {
+                cerrarFormulario();
+            } else {
+                // Muestra el formulario y actualiza el nombre del jugador
+                formularioMostrar.style.display = 'block';
+                jugadorNombre.innerHTML = nombreJugador;
+    
+                document.querySelector('label[for="nombrejugador"]').style.visibility = 'visible';
+    
+                // Asigna el nombre del jugador al campo oculto en el formulario
+                document.getElementById('nombrejugador').value = nombreJugador;
+    
+                // Mueve el formulario debajo del jugador seleccionado
+                event.currentTarget.parentNode.appendChild(formularioMostrar);
+            }
+        }
+    
+        function cerrarFormulario() {
+            var formularioMostrar = document.getElementById('formulario');
+            formularioMostrar.style.display = 'none';
+    
+            document.querySelector('label[for="nombrejugador"]').style.visibility = 'hidden';
+        }
+    
+        const guardarFormulario = document.getElementById('guardarFormulario');
+        guardarFormulario.addEventListener('click', () => {
+            var datosValidos = validarDatos(); // Agrega esta función para validar los datos
+            if (datosValidos) {
+                alert('Datos Guardados.');
+            } else {
+                alert('Por favor, ingrese datos válidos (números) en todos los campos.');
+            }
+            return;
+        });
+
+        function validarDatos() {
+            var datos = document.querySelectorAll('input[type="number"]');
+            for (var i = 0; i < datos.length; i++) {
+                if (isNaN(datos[i].value) || datos[i].value === '') {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
+

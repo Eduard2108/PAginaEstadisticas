@@ -1,0 +1,44 @@
+#banner {
+background:
+  url("/static/assets/img/banner2.png") no-repeat;
+  background-size: cover;
+  height: 400px;
+  background-position: 0 -30px;
+}
+
+@media screen and (max-width:768px){
+#banner {
+  background-size: cover;
+  height: 300px;
+  background-position: right bottom;
+} 
+  
+#banner h1{
+  font-size: 3.2rem !important;
+}
+
+
+#banner p{
+    padding:0.5rem;
+    text-align: center;
+  } 
+}
+.lead.mt-5 {
+  font-size: 1.20em; /* Hace el texto más pequeño */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.display-1.font-italic {
+  color: white; /* Cambia el color del texto */
+}
+.badge.badge-primary.shadow {
+  background-color: #811010; /* Cambia el color de fondo */
+}
+h5.card-title{
+  line-height:1.6rem;
+}
+
+
+#footer a {
+    padding: 0.8rem;
+}

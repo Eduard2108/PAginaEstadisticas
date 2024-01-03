@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datos Real Madrid</title>
+    <link rel="stylesheet" href="/static/css/TablaRealMadrid.css">
+</head>
+<body>
+    <h1>Estadisticas Real Madrid</h1>
+    <table border="1">
+        <tr>
+            {% for key in datos[0] %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for jugador in datos %}
+            <tr>
+                {% for value in jugador.values() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/graficoRealMadrid">Ver Grafico</a>
+    <a href="{{ url_for('pdf_real_madrid') }}">Descargar pdf</a>
+</body>
+</html>

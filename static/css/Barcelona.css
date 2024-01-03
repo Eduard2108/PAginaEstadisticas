@@ -1,0 +1,116 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    background-image: url(/static/assets/barce/fondo.jpg);
+    background-size: 100%;
+    background-position: center;
+
+}
+
+h1 {
+    color: white;
+    text-shadow: 1px 2px 2px rgb(5, 94, 121), 0 0 25px rgb(16, 81, 156), 0 0 5px rgb(10, 81, 148);
+    text-align: center;
+    background-image: url(/static/assets/barce/banner.jpg);
+    background-size: cover;
+    padding: 100px;
+    margin-top: 0%;
+    position: relative;
+    background-position: center;
+}
+.boton-regresar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    top: 20px;
+    position: absolute;
+}
+.container-jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+.galeria {
+    margin: 20px;
+    background-color: white;
+    width: 370px; /* aumenta el ancho del contenedor de la imagen */
+    text-align: center;  
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-image: url(/static/assets/barce/backimagenbarce.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.galeria img {
+    width: 100%;
+    max-width: 120%;/* aumenta el fondo de la imagen */
+    height: auto;
+}
+
+.pie {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding: 1px;
+    background-color: rgb(0, 0, 0); /* fondo blanco para los pies de la imagen */
+    text-decoration: none;
+    color: gold;
+    font-size: 19px;
+}
+.galeria a{
+    text-decoration: none;
+}
+
+.formulario {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    position: absolute; 
+    transform: translateY(-480px);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    color: black;
+
+}
+.formulario input{
+    text-align: center;
+}
+
+.formulario label{
+    display: block;
+}
+.jugador-nombre {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.formulario button {
+    background-color: #5895b1;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    display: block;
+}
+
+
+.formulario button:hover {
+    background-color: #000000;
+}
+img:hover { -webkit-filter: brightness(115%); }

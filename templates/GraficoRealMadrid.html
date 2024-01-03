@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos</title>
+    <link rel="stylesheet" href="/static/css/Grafico.css">
+</head>
+<body>
+    <h1>Gráficos Equipo Real Madrid</h1>
+    
+    <h2>Gráficos por Jugador</h2>
+
+    <div class="grafico-container">
+        {% for grafico_data in graficos_jugadores %}
+            <div class="grafico-item">
+                <h2>{{ grafico_data["nombre_jugador"] }}</h2>
+                <img src="data:image/png;base64,{{ grafico_data["grafico_base64"] }}" alt="Gráfico de Pastel">
+                <br><br>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+

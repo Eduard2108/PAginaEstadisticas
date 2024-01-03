@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/TablaBarcelona.css">
+    <title>Datos Barcelona</title>
+</head>
+<body>
+
+    <h1>Estadisticas de Barcelona</h1>
+    <table border="1">
+        <tr>
+            {% for key in datos[0] %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for jugador in datos %}
+            <tr>
+                {% for key, value in jugador.items() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}        
+    </table>
+    <a href="/graficosBarcelona">Ver Grafico</a>
+    <a href="{{ url_for('pdf_barcelona') }}">Descargar pdf</a>
+</body>
+</html>
